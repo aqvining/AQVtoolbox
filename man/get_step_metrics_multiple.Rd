@@ -19,7 +19,7 @@ get_step_metrics_multiple(
 
 \item{x}{character giving name of column with x coordinates}
 
-\item{y}{haracter giving name of column with y coordinates}
+\item{y}{character giving name of column with y coordinates}
 
 \item{step_number}{name of a column with the ordered number of steps. Used to ensure proper sorting}
 }
@@ -32,5 +32,5 @@ calculates distance traveled between all consecutive points (rows) in the data f
 \examples{
 move_data1 <- data.frame(x = rnorm(10), y = rnorm(10), Individual = "Subject1", step = 1:10)
 move_data2 <- data.frame(x = rnorm(10), y = rnorm(10), Individual = "Subject2", step = 1:10)
-get_step_metrics_multiple(rbind(move_data1, move_data2), ID = "Individual", x = "x", y = "y", step_number = "step"
+get_step_metrics_multiple(rbind(move_data1, move_data2), id = "Individual", x = "x", y = "y", step_number = "step")
 }
