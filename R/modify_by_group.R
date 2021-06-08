@@ -1,4 +1,5 @@
 #' @title Modify by Group
+#' @author Alexander Vining & Katherine Stewart
 #' 
 #' @description modifies a dataframe by applying a transformative function accross groups
 #'
