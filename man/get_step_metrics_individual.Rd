@@ -12,13 +12,13 @@ get_step_metrics_individual(
 )
 }
 \arguments{
-\item{individual_movement_data}{data_frame with at least two columns containing x and y coordinate data.}
+\item{individual_movement_data}{data_frame with at least two columns containing x and y coordinate data. If these columns are not named "X"and "Y" the names of the columns must be given to the x and y parameters}
 
 \item{x}{character}
 
 \item{y}{character}
 
-\item{step_number}{character}
+\item{step_number}{character, gives column name of step numbers in individual movement data}
 }
 \value{
 data frame

@@ -2,16 +2,16 @@
 #'
 #' calculates distance traveled between all consecutive points (rows) in the data frame
 #'
-#' @param individual_movement_data data_frame with at least two columns containing x and y coordinate data.
+#' @param individual_movement_data data_frame with at least two columns containing x and y coordinate data. If these columns are not named "X"and "Y" the names of the columns must be given to the x and y parameters
 #' @param x character
 #' @param y character
-#' @param step_number character
+#' @param step_number character, gives column name of step numbers in individual movement data
 #'
 #' @return data frame
 #' @export
 #'
 get_step_metrics_individual <- function(individual_movement_data, x = "X", y = "Y", step_number = NA) {
-  if (! is.na(step_number)) individual_movement_data <- individual_movement_data[order(individual_movement_data[,step_number]),] #sort by step number
+  if (! is.na(step_number)) individual_movement_data <- individual_movement_data[order(individual_movement_data[[step_number]]),] #sort by step number
   diff_x <- diff(individual_movement_data[[x]])
   diff_y <- diff(individual_movement_data[[y]])
 
